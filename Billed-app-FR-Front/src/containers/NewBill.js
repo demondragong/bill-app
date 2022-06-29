@@ -17,6 +17,15 @@ export default class NewBill {
   }
   handleChangeFile = e => {
     e.preventDefault()
+
+    // warn user if file extension is not correct and exit function
+    const fileExtension = e.target.value.match(/\.([^\.]+)$/)[1];
+    if (!['jpg','jpeg','png'].includes(fileExtension)) {
+        alert('Veuillez sélectionner une image au format jpg, jpeg ou png.');
+        e.target.value = '';
+        return
+    }
+
     const file = this.document.querySelector(`input[data-testid="file"]`).files[0]
     const filePath = e.target.value.split(/\\/g)
     const fileName = filePath[filePath.length-1]
