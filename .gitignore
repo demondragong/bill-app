@@ -1,1 +1,10 @@
 /.DS_Store
+
+node_modules
+coverage
+.idea
+
+
+database_test.sqlite
+node_modules/
+coverage/
