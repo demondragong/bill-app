@@ -21,7 +21,6 @@ export default class NewBill {
   handleChangeFile = e => {
     e.preventDefault()
     const file = this.document.querySelector(`input[data-testid="file"]`).files[0]
-    console.log(file.type)
     const errorMessage = document.querySelector("[data-testid='file-extension-error']");
     // warn user if file extension is not correct and exit function
     if (file.type != 'image/png' && file.type != 'image/jpeg') {
@@ -31,9 +30,9 @@ export default class NewBill {
         e.target.value = '';
         return
     }
+    // hide error message
     errorMessage.classList.add("d-none");
 
-    
     const filePath = file.name.split(/\\/g)
     const fileName = filePath[filePath.length-1]
     const formData = new FormData()

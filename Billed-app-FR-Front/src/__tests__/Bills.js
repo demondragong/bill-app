@@ -59,7 +59,7 @@ describe("Given I am connected as an employee", () => {
         document, onNavigate, store, localStorage: window.localStorage
       })
 
-      const handleClickButton = jest.fn(billsContainer.handleClickButton)
+      const handleClickButton = jest.fn()
       const newBillButton = screen.getByTestId('btn-new-bill')
       newBillButton.addEventListener('click', handleClickButton)
       userEvent.click(newBillButton)
@@ -76,19 +76,22 @@ describe("Given I am connected as an employee", () => {
       const onNavigate = (pathname) => {
         document.body.innerHTML = ROUTES({ pathname })
       }
-      const store = null
+      const store = mockStore
       const billsContainer = new Bills({
         document, onNavigate, store, localStorage: window.localStorage
       })
 
       // get the first eye icon available
       const eye = screen.getAllByTestId('icon-eye')[0]
+      console.log(screen.getAllByTestId('icon-eye').length)
+      console.log(eye.dataset.billUrl)
       const handleClickIconEye = jest.fn(billsContainer.handleClickIconEye(eye))
       
       eye.addEventListener('click', handleClickIconEye)
       userEvent.click(eye)
       expect(handleClickIconEye).toHaveBeenCalled()
       // expect the modal with the file image to be visible
+      // this test seems to always work...
       expect(screen.getByTestId("modaleFile")).toBeTruthy()
     })
   })

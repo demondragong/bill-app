@@ -20,8 +20,8 @@ const row = (bill) => {
   }
 
 const rows = (data) => {
-  // bien comprendre pourquoi ce sort fonctionne (evaluer superieur/inferieur de deux chaines de caracteres)
-  return (data && data.length) ? data.sort((a,b) => a.date < b.date ? 1 : a.date > b.date ? -1 : 0).map(bill => row(bill)).join("") : ""
+  const antiChrono = (a, b) => ((a.date < b.date) ? 1 : -1)
+  return (data && data.length) ? data.sort(antiChrono).map(bill => row(bill)).join("") : ""
 }
 
 export default ({ data: bills, loading, error }) => {
