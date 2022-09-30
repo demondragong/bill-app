@@ -1,37 +1,34 @@
+<a name="readme-top"></a>
+# BillApp (debugging and testing project)
 
-## Projet 9 - Débuggez et testez un SaaS RH
+Training project to practice testing (unit, integration, end-to-end) and Jest.
+
+## Getting Started
+
+### Instructions to run the backend
+
+See backend's readme...
+
+
+
+### Instructions to run the frontend
+
+1. Open a terminal window in the cloned project
+1. Navigate to the frontend folder (cd Billed-app-FR-Front)
+1. Run the following commands
+
+```bash
+# Install dependencies
+npm install
+
+# Install liveserver
+npm install -g live-server
+
+# Launch liverserver
+live-server
 ```
 
-## Comment lancer l'application en local ?
-
-### étape 1 - Lancer le backend :
-
-Suivez les indications dans le README du projet backend.
-
-### étape 2 - Lancer le frontend :
-
-Allez au repo cloné :
-```
-$ cd Billed-app-FR-Front
-```
-
-Installez les packages npm (décrits dans `package.json`) :
-```
-$ npm install
-```
-
-Installez live-server pour lancer un serveur local :
-```
-$ npm install -g live-server
-```
-
-Lancez l'application :
-```
-$ live-server
-```
-
-Puis allez à l'adresse : `http://127.0.0.1:8080/`
-
+Then go to `http://127.0.0.1:8080/`
 
 ## Comment lancer tous les tests en local avec Jest ?
 
@@ -48,21 +45,26 @@ $npm i -g jest-cli
 $jest src/__tests__/your_test_file.js
 ```
 
-## Comment voir la couverture de test ?
+### To see the test coverage report go to:
 
 `http://127.0.0.1:8080/coverage/lcov-report/`
 
-## Comptes et utilisateurs :
+### Testing accounts :
 
-Vous pouvez vous connecter en utilisant les comptes:
+### admin : 
+```
+user : admin@test.tld 
+password : admin
+```
+### employee :
+```
+user : employee@test.tld
+password : employee
+```
 
-### administrateur : 
-```
-utilisateur : admin@test.tld 
-mot de passe : admin
-```
-### employé :
-```
-utilisateur : employee@test.tld
-mot de passe : employee
-```
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
