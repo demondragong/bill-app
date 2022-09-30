@@ -7,7 +7,27 @@ Training project to practice testing (unit, integration, end-to-end) and Jest.
 
 ### Instructions to run the backend
 
-See backend's readme...
+Clone the projet
+```
+git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
+```
+
+Go to the project directory 
+```
+cd Billed-app-FR-Back
+```
+
+Install project dependancies
+```
+npm install
+```
+
+Run the API
+```
+npm run:dev
+```
+
+The API is locally available on port `5678`, go to `http://localhost:5678`
 
 
 
