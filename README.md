@@ -30,20 +30,6 @@ live-server
 
 Then go to `http://127.0.0.1:8080/`
 
-## Comment lancer tous les tests en local avec Jest ?
-
-```
-$ npm run test
-```
-
-## Comment lancer un seul test ?
-
-Installez jest-cli :
-
-```
-$npm i -g jest-cli
-$jest src/__tests__/your_test_file.js
-```
 
 ### To see the test coverage report go to:
 
